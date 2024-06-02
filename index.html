@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mpnelias</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vulkan</h1>
+    </header>
+
+    <nav>
+        <a href="#">Página Inicial</a>
+        <a href="javascript:void(0);" onclick="scrollToSection('produtos')">Produtos</a> |
+        <a href="javascript:void(0);" onclick="scrollToSection('orçamento')">orçamento</a> |
+        <a href="javascript:void(0);" onclick="scrollToSection('')">Acabamento</a> |
+        <a href="javascript:void(0);" onclick="scrollToSection('sobre-nos')">Sobre Nós</a> |
+    </nav>
+
+    <section>
+        <article>
+            <h2 id="pagina-inicial">Boas-vindas a Vulkan!</h2>
+            <i>Cliente exigente em busca de qualidade e elegância para seus projetos. Apaixonado por design exclusivo,
+                valoriza a sofisticação e a durabilidade proporcionadas pela excelência de um bom trabalho.</i>
+            <table align="right">
+            </table>
+        </article>
+
+        <article>
+            <h2 id="produtos" style="font-size: 25px;">Produtos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/card-1.jpg" alt="Card 1">
+                    <div class="card-content">
+                        <h3>...</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/cards-2.jpg" alt="Card 2">
+                    <div class="card-content">
+                        <h3>...</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/card-3.jpg" alt="Card 3">
+                    <div class="card-content">
+                        <h3>...</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/card-4.jpg" alt="Card 4">
+                    <div class="card-content">
+                        <h3>...</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/card-5.jpg" alt="Card 5">
+                    <div class="card-content">
+                        <h3>...</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <br>
+            <h2 id="orçamento" class="tabela">Tabela com nossos produtos 🠗</h2>
+            <table border="2" align="center" width="1200" height="30">
+                <tr>
+                    <td><strong>Código</strong></td>
+                    <td><strong>Nome</strong></td>
+                    <td><strong>Preço</strong> </td>
+                </tr>
+                <td>714253</td>
+                <td>Granito</td>
+                <td>R$ 230m²</td>
+                </tr>
+                <tr>
+                    <td>355016</td>
+                    <td>Mármore</td>
+                    <td>R$ 200m²</td>
+                </tr>
+                <tr>
+                    <td>644369</td>
+                    <td>Quartzito</td>
+                    <td>R$ 300m²</td>
+                </tr>
+                <tr>
+                    <td>558685</td>
+                    <td>Silestone</td>
+                    <td>R$ 140m²</td>
+                </tr>
+
+                <tr>
+                    <td>732597</td>
+                    <td>Ardozia</td>
+                    <td>R$ 260m²</td>
+                </tr>
+
+                <tr>
+                    <td>561986</td>
+                    <td>Limestone</td>
+                    <td>R$ 150m²</td>
+                </tr>
+            </table>
+
+            <h2 class="orçamento">Calcule seu orçamento 🠗</h2>
+
+            <table border="2" align="center" width="1350">
+                <tr>
+                    <td>Informe o código do produto <input type="number" id="codigo"></td>
+                    <td>Informe a altura do produto <input type="number" id="altura"></td>
+                    <td>Informe a largura do produto <input type="number" id="largura"></td>
+                    <td><button id="calcular" style="font-size: 20px; width: 100%;">Calcular</button></td>
+                </tr>
+            </table> <br>
+            <table border="2" align="center" width="360">
+                <tr>
+                    <td>O valor do seu orçamento ficou de: <input style="width: 79px;" type="text" id="resultado"
+                            readonly></td>
+                </tr>
+            </table>
+
+        </article>
+    </section>
+
+    <article class="article">
+        <h2 id="sobre-nos" style="font-size: 28px;">Sobre Nós!</h2>
+        <section class="section-sobre-nos">
+            <img src="img/sobre-nos.png" alt="Descrição da Imagem">
+            <p>
+                Bem-vindo à nossa página "Sobre Nós". Somos uma equipe dedicada e apaixonada por criar conteúdo
+                incrível e inovador. Nosso objetivo é fornecer informações valiosas e entretenimento de qualidade
+                para nossos visitantes.
+            </p>
+            <p>
+                Nossa equipe é composta por profissionais experientes e entusiastas que trabalham juntos para
+                trazer o melhor para você. Estamos comprometidos com a excelência em tudo o que fazemos.
+            </p>
+        </section>
+    </article>
+
+    <div class="support-tab" id="toggleSupport">Suporte</div>
+
+    <div id="supportModal">
+        <h2>Escreva sua mensagem de suporte</h2>
+        <textarea id="supportMessage" rows="4" placeholder="Digite sua mensagem..."></textarea><br>
+        <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+
+    <div id="popup">
+        <p id="successMessage">Mensagem enviada com sucesso!</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
+
+    <footer>
+        <p>&copy; Marmoraria do Raul @todos os direitos reservados 2023</p>
+    </footer>
+
+    <script src="javaScript.js"></script>
+</body>
+
+</html>
